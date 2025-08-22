@@ -14,10 +14,34 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Payoo</title>
   </head>
-  <body class="outfit ">
+  <body class="outfit h-[100vh] flex items-center justify-center bg-[#F4F5F7]">
+    <div>
+      <div
+        class="h-[140px] w-[90%] mx-auto bg-[url(/assets/bg.png)] bg-cover flex justify-center items-center"
+      >
+        <img src="./assets/Group.png" alt="" />
+      </div>
+      <form action="" class="p-10 rounded-3xl bg-[#ffff]">
+        <label for="">Mobile Number</label>
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+        />
+        <br />
+        <label for="">4 Digit Pin</label>
 
-    
-
+        <input
+          type="text"
+          placeholder="Enter your 4 Digit Pin "
+          class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+        />
+        <br />
+        <button class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white">
+          Login
+        </button>
+      </form>
+    </div>
 
     <script src="./script.js"></script>
   </body>
