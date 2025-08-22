@@ -1,4 +1,8 @@
-document.getElementById("login-btn").addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log("button is clicked");
-});
+// login button functionality
+
+document
+  .getElementById("login-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("button is clicked");
+  });
