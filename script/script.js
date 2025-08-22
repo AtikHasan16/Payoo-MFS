@@ -12,8 +12,9 @@ document
     const getPin = document.getElementById("pin-number").value;
 
     if (getNumber == mobileNumber && pinNumber == getPin) {
-      window.location.assign("./home.html");
+      window.location.replace("../home.html");
     } else {
       alert("Invalid credentials");
     }
   });
+
