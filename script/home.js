@@ -31,3 +31,20 @@ document
     const newTotalBalance = mainBalance + getAddAmount;
     document.getElementById("main-balance").innerText = newTotalBalance;
   });
+
+document.getElementById("add-money-ftr").addEventListener("click", function () {
+  document.getElementById("add-money-form").style.display = "block";
+  document.getElementById("cashout-form").style.display = "none";
+  document.getElementById("transfer-form").style.display = "none";
+});
+
+document.getElementById("cashout-ftr").addEventListener("click", function () {
+  document.getElementById("add-money-form").style.display = "none";
+  document.getElementById("transfer-form").style.display = "none";
+  document.getElementById("cashout-form").style.display = "block";
+});
+document.getElementById("transfer-ftr").addEventListener("click", function () {
+  document.getElementById("add-money-form").style.display = "none";
+  document.getElementById("transfer-form").style.display = "block";
+  document.getElementById("cashout-form").style.display = "none";
+});

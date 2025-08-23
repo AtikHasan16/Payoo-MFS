@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Payoo Home</title>
   </head>
-  <body class="outfit bg-[#F4F5F7]">
+  <body class="outfit h-[100%] bg-[#F4F5F7]">
     <div class="max-w-[450px] mx-auto">
       <!-- features section -->
       <div class="bg-white rounded-b-3xl pt-3 px-2">
@@ -58,47 +58,53 @@
 
         <div id="features" class="grid grid-cols-3 gap-5 px-2 pb-6">
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center"
+            id="add-money-ftr"
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img src="./assets/wallet1.png" class="mx-auto mb-2" alt="" />
-              <h3 class="text-[14px] text-[#080808b4]">Add Money</h3>
+              <h3 class="cursor-pointer">Add Money</h3>
             </div>
           </div>
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center"
+            id="cashout-ftr"
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img src="./assets/send1.png" class="mx-auto mb-2" alt="" />
-              <h3 class="text-[14px] text-[#080808b4]">CashOut</h3>
+              <h3 class="cursor-pointer">CashOut</h3>
             </div>
           </div>
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-3 flex justify-center items-center"
+            id="transfer-ftr"
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-3 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img src="./assets/money1.png" class="mx-auto mb-2" alt="" />
-              <h3 class="text-[14px] text-[#080808b4]">Transfer Money</h3>
+              <h3 class="cursor-pointer">Transfer Money</h3>
             </div>
           </div>
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center"
+            id="  "
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img src="./assets/bonus1.png" class="mx-auto mb-2" alt="" />
-              <h3 class="text-[14px] text-[#080808b4]">Get Bonus</h3>
+              <h3 class="cursor-pointer">Get Bonus</h3>
             </div>
           </div>
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center"
+            id="  "
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img src="./assets/purse1.png" class="mx-auto mb-2" alt="" />
-              <h3 class="text-[14px] text-[#080808b4]">Pay Bill</h3>
+              <h3 class="cursor-pointer">Pay Bill</h3>
             </div>
           </div>
           <div
-            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center"
+            id="  "
+            class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
               <img
@@ -106,14 +112,14 @@
                 class="mx-auto mb-2"
                 alt=""
               />
-              <h3 class="text-[14px] text-[#080808b4]">Transaction</h3>
+              <h3 class="">Transaction</h3>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- form section -->
-      <div class="py-2 px-2">
+      <!-- Add Money form section -->
+      <div id="add-money-form" class="py-2 px-2">
         <h1 class="font-semibold text-lg mb-2">Add Money</h1>
         <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
           <label for="">Select A bank</label>
@@ -157,6 +163,82 @@
           </button>
         </form>
       </div>
+
+      <!-- CashOut form section -->
+
+      <div id="cashout-form" class="py-2 px-2">
+        <h1 class="font-semibold text-lg mb-2">CashOut</h1>
+        <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
+          <label for="">Agent Number</label>
+          <input
+            id="agent-number"
+            type="text"
+            placeholder="Enter 11 digit number"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <label for="">Amount</label>
+          <input
+            id="withdraw-amount"
+            type="text"
+            placeholder="Enter amount to withdraw"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <label for="">Pin Number</label>
+          <input
+            id="withdraw-pin"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <button
+            id="withdraw-money"
+            class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white cursor-pointer text-lg font-semibold"
+          >
+            withdraw Money
+          </button>
+        </form>
+      </div>
+
+      <!-- Transfer Money form section -->
+      <div id="transfer-form" class="py-2 px-2">
+        <h1 class="font-semibold text-lg mb-2">Transfer Money</h1>
+        <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
+          <label for="">User Account Number</label>
+          <input
+            id="agent-number"
+            type="text"
+            placeholder="Enter 11 digit number"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <label for="">Amount</label>
+          <input
+            id="transfer-amount"
+            type="text"
+            placeholder="Enter amount to transfer"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <label for="">Pin Number</label>
+          <input
+            id="transfer-pin"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <button
+            id="send-now"
+            class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white cursor-pointer text-lg font-semibold"
+          >
+            Send Now
+          </button>
+        </form>
+      </div>
+      <!-- Get Bonus form section -->
+      <!-- Pay Bill form section -->
+      <!-- Transaction form section -->
     </div>
     <script src="./script/home.js"></script>
   </body>
