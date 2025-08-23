@@ -25,14 +25,16 @@
   <body class="outfit bg-[#F4F5F7]">
     <div class="max-w-[450px] mx-auto">
       <!-- features section -->
-      <div class="bg-white rounded-b-3xl pt-3">
+      <div class="bg-white rounded-b-3xl pt-3 px-2">
         <div
           class="flex justify-center items-center gap-25 border-b border-gray-300 pb-4 px-4"
         >
           <div class="flex justify-center items-center gap-1">
             <img src="./assets/Group.png" alt="" class="w-12" />
             <div>
-              <h2 class="font-extrabold text-lg">$ <span>45000</span></h2>
+              <h2 class="font-extrabold text-lg">
+                $ <span id="main-balance">45000</span>
+              </h2>
               <p class="text-[#08080880]">Available Balance</p>
             </div>
           </div>
@@ -111,11 +113,12 @@
       </div>
 
       <!-- form section -->
-      <div class="py-3 px-4">
+      <div class="py-2 px-2">
         <h1 class="font-semibold text-lg mb-2">Add Money</h1>
-        <form class="p-8 rounded-3xl bg-[#ffff]">
+        <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
           <label for="">Select A bank</label>
           <select
+            id="bank-name"
             class="select select-md rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
           >
             <option disabled selected>Select bank</option>
@@ -125,14 +128,14 @@
           </select>
           <label for="">Bank Account Number</label>
           <input
-            id=""
+            id="acc-number"
             type="text"
             placeholder="Enter 11 digit acount number"
             class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
           />
           <label for="">Amount to Add</label>
           <input
-            id=""
+            id="add-amount"
             type="text"
             placeholder="Add amount to withdraw"
             class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
@@ -140,14 +143,14 @@
           <br />
           <label for="">Pin Number</label>
           <input
-            id=""
+            id="pin"
             type="text"
             placeholder="Enter your 4 Digit Pin "
             class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
           />
           <br />
           <button
-            id=""
+            id="add-money"
             class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white cursor-pointer text-lg font-semibold"
           >
             Add Money
