@@ -17,4 +17,3 @@ document
       alert("Invalid credentials");
     }
   });
-
