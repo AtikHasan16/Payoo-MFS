@@ -12,7 +12,7 @@ document
     const getPin = document.getElementById("pin-number").value;
 
     if (getNumber == mobileNumber && pinNumber == getPin) {
-      window.location.href = "../home.html";
+      window.location.href = "home.html";
     } else {
       alert("Invalid credentials");
     }
