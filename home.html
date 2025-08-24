@@ -85,7 +85,7 @@
             </div>
           </div>
           <div
-            id="  "
+            id="get-bonus-ftr"
             class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
@@ -94,7 +94,7 @@
             </div>
           </div>
           <div
-            id="  "
+            id="pay-bill-ftr"
             class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
@@ -103,7 +103,7 @@
             </div>
           </div>
           <div
-            id="  "
+            id="transaction-ftr"
             class="border-1 border-gray-300 rounded-lg text-center py-4 px-6 flex justify-center items-center text-[14px] text-[#080808b4] hover:bg-blue-50 hover:border-1 hover:border-blue-500 hover:text-blue-500 hover:font-semibold"
           >
             <div>
@@ -207,7 +207,7 @@
         <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
           <label for="">User Account Number</label>
           <input
-            id="agent-number"
+            id="user-number"
             type="text"
             placeholder="Enter 11 digit number"
             class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
@@ -237,7 +237,73 @@
         </form>
       </div>
       <!-- Get Bonus form section -->
+
+      <div id="bonus-form" class="py-2 px-2 hidden">
+        <h1 class="font-semibold text-lg mb-2">Get Bonus</h1>
+        <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
+          <label for="">Enter Bonus Coupon</label>
+          <input
+            id="user-number"
+            type="text"
+            placeholder="Enter your Coupon"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <button
+            id="get-bonus"
+            class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white cursor-pointer text-lg font-semibold"
+          >
+            Get Bonus
+          </button>
+        </form>
+      </div>
+
       <!-- Pay Bill form section -->
+
+      <div id="pay-bill-form" class="py-2 px-2">
+        <h1 class="font-semibold text-lg mb-2">Pay Bill</h1>
+        <form class="py-2 px-5 rounded-3xl bg-[#ffff]">
+          <label for="">Select A bank</label>
+          <select
+            id="bank-name"
+            class="select select-md rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          >
+            <option disabled selected>Select bank</option>
+            <option>National Bank</option>
+            <option>AB Bank</option>
+            <option>Islamic bill</option>
+          </select>
+          <label for="">Biller Account Number</label>
+          <input
+            id="biller-number"
+            type="text"
+            placeholder="Enter 11 digit acount number"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <label for="">Amount to Pay</label>
+          <input
+            id="add-amount"
+            type="text"
+            placeholder="Add amount to pay"
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <label for="">Pin Number</label>
+          <input
+            id="pin"
+            type="text"
+            placeholder="Enter your 4 Digit Pin "
+            class="input rounded-3xl w-full h-12 my-2 bg-[#f4f5f7] border-0"
+          />
+          <br />
+          <button
+            id="pay-now"
+            class="h-12 rounded-3xl w-full my-2 bg-[#0874F2] text-white cursor-pointer text-lg font-semibold"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
       <!-- Transaction form section -->
     </div>
     <script src="./home.js"></script>

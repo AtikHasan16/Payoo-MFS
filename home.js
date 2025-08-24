@@ -15,9 +15,9 @@ function getIdInnerText(id) {
 }
 // function for replacing available balance with new value
 function setInnerText(value) {
-  const mainBalance = (document.getElementById("main-balance").innerText =
+  const availableBalance = (document.getElementById("main-balance").innerText =
     value);
-  return mainBalance;
+  return availableBalance;
 }
 
 // add money section
@@ -52,40 +52,93 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     const getWithdrawAmount = idValue("withdraw-amount");
+    console.log(getWithdrawAmount);
     const mainBalance = getIdInnerText("main-balance");
-    const agentNumber = idValue("agent-number");
-    const pin = parseInt(idValue("withdraw-pin"));
-    const validPin = 2121;
+
     if (getWithdrawAmount <= 0 || getWithdrawAmount > mainBalance) {
       alert("Provide a valid amount");
       return;
-    } else if (agentNumber.length != 11) {
-      alert("Account Number Invalid");
-    } else if (pin !== validPin) {
-      alert("Your Pin is Invalid");
-      return;
     }
 
+    // const agentNumber = idValue("agent-number");
+    // const pin = parseInt(idValue("withdraw-pin"));
+    // const validPin = 2121;
+    // if (agentNumber.length != 11) {
+    //   alert("Account Number Invalid");
+    //   return;
+    // } else if (pin !== validPin) {
+    //   alert("Your Pin is Invalid");
+    //   return;
+    // }
+
     let newTotalBalance = mainBalance - getWithdrawAmount;
+    console.log(newTotalBalance);
     setInnerText(newTotalBalance);
   });
 
 // Transfer Money section
+
+document.getElementById("send-now").addEventListener("click", function (event) {
+  event.preventDefault();
+  const transferAmount = idValue("transfer-amount");
+  const mainBalance = getIdInnerText("main-balance");
+
+  if (transferAmount <= 0 || transferAmount > mainBalance) {
+    console.log(mainBalance);
+    alert("Provide a valid amount");
+    return;
+  }
+  // const userNumber = idValue("user-number");
+  // const pin = parseInt(idValue("transfer-pin"));
+  // const validPin = 2121;
+
+  // if (userNumber.length != 11) {
+  //   alert("Account Number Invalid");
+  //   return;
+  // } else if (pin !== validPin) {
+  //   alert("Your Pin is Invalid");
+  //   return;
+  // }
+
+  let newTotalBalance = mainBalance - transferAmount;
+  setInnerText(newTotalBalance);
+});
 
 // manual window toggling
 document.getElementById("add-money-ftr").addEventListener("click", function () {
   document.getElementById("add-money-form").style.display = "block";
   document.getElementById("cashout-form").style.display = "none";
   document.getElementById("transfer-form").style.display = "none";
+  document.getElementById("bonus-form").style.display = "none";
+  document.getElementById("pay-bill-form").style.display = "none";
 });
 
 document.getElementById("cashout-ftr").addEventListener("click", function () {
   document.getElementById("add-money-form").style.display = "none";
   document.getElementById("transfer-form").style.display = "none";
   document.getElementById("cashout-form").style.display = "block";
+  document.getElementById("bonus-form").style.display = "none";
+  document.getElementById("pay-bill-form").style.display = "none";
 });
 document.getElementById("transfer-ftr").addEventListener("click", function () {
   document.getElementById("add-money-form").style.display = "none";
   document.getElementById("transfer-form").style.display = "block";
   document.getElementById("cashout-form").style.display = "none";
+  document.getElementById("bonus-form").style.display = "none";
+  document.getElementById("pay-bill-form").style.display = "none";
+});
+
+document.getElementById("get-bonus-ftr").addEventListener("click", function () {
+  document.getElementById("bonus-form").style.display = "block";
+  document.getElementById("add-money-form").style.display = "none";
+  document.getElementById("transfer-form").style.display = "none";
+  document.getElementById("cashout-form").style.display = "none";
+  document.getElementById("pay-bill-form").style.display = "none";
+});
+document.getElementById("pay-bill-ftr").addEventListener("click", function () {
+  document.getElementById("bonus-form").style.display = "none";
+  document.getElementById("add-money-form").style.display = "none";
+  document.getElementById("transfer-form").style.display = "none";
+  document.getElementById("cashout-form").style.display = "none";
+  document.getElementById("pay-bill-form").style.display = "block";
 });
