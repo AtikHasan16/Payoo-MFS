@@ -19,6 +19,28 @@ function setInnerText(value) {
     value);
   return availableBalance;
 }
+// function for display toggling reusability
+
+function sectionToggle(id) {
+  const forms = document.getElementsByClassName("form");
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+  return;
+}
+
+// Function for section button style
+function sectionBtnStyle(id) {
+  const sections = document.getElementsByClassName("section-btn");
+
+  for (const section of sections) {
+    section.classList.remove("border-blue-500", "bg-blue-50");
+    section.classList.add("border-gray-300");
+  }
+  document.getElementById(id).classList.remove("border-gray-300");
+  document.getElementById(id).classList.add("border-blue-500", "bg-blue-50");
+}
 
 // add money section
 document
@@ -104,55 +126,41 @@ document.getElementById("send-now").addEventListener("click", function (event) {
 });
 
 // manual window toggling
-document.getElementById("add-money-ftr").addEventListener("click", function () {
-  document.getElementById("add-money-form").style.display = "block";
-  document.getElementById("cashout-form").style.display = "none";
-  document.getElementById("transfer-form").style.display = "none";
-  document.getElementById("bonus-form").style.display = "none";
-  document.getElementById("pay-bill-form").style.display = "none";
-});
+// document
+//   .getElementById("transaction-ftr")
+//   .addEventListener("click", function () {
+//     document.getElementById("transaction-form").style.display = "block";
+//     document.getElementById("bonus-form").style.display = "none";
+//     document.getElementById("add-money-form").style.display = "none";
+//     document.getElementById("transfer-form").style.display = "none";
+//     document.getElementById("cashout-form").style.display = "none";
+//     document.getElementById("pay-bill-form").style.display = "none";
+//   });
 
+//Reusable window toggling
+document.getElementById("add-money-ftr").addEventListener("click", function () {
+  sectionToggle("add-money-form");
+  sectionBtnStyle("add-money-ftr");
+});
 document.getElementById("cashout-ftr").addEventListener("click", function () {
-  document.getElementById("add-money-form").style.display = "none";
-  document.getElementById("transfer-form").style.display = "none";
-  document.getElementById("cashout-form").style.display = "block";
-  document.getElementById("bonus-form").style.display = "none";
-  document.getElementById("pay-bill-form").style.display = "none";
-  document.getElementById("transaction-form").style.display = "none";
+  sectionToggle("cashout-form");
+  sectionBtnStyle("cashout-ftr");
 });
 document.getElementById("transfer-ftr").addEventListener("click", function () {
-  document.getElementById("add-money-form").style.display = "none";
-  document.getElementById("transfer-form").style.display = "block";
-  document.getElementById("cashout-form").style.display = "none";
-  document.getElementById("bonus-form").style.display = "none";
-  document.getElementById("pay-bill-form").style.display = "none";
-  document.getElementById("transaction-form").style.display = "none";
+  sectionToggle("transfer-form");
+  sectionBtnStyle("transfer-ftr");
 });
-
 document.getElementById("get-bonus-ftr").addEventListener("click", function () {
-  document.getElementById("bonus-form").style.display = "block";
-  document.getElementById("add-money-form").style.display = "none";
-  document.getElementById("transfer-form").style.display = "none";
-  document.getElementById("cashout-form").style.display = "none";
-  document.getElementById("pay-bill-form").style.display = "none";
-  document.getElementById("transaction-form").style.display = "none";
+  sectionToggle("bonus-form");
+  sectionBtnStyle("get-bonus-ftr");
 });
 document.getElementById("pay-bill-ftr").addEventListener("click", function () {
-  document.getElementById("bonus-form").style.display = "none";
-  document.getElementById("add-money-form").style.display = "none";
-  document.getElementById("transfer-form").style.display = "none";
-  document.getElementById("cashout-form").style.display = "none";
-  document.getElementById("pay-bill-form").style.display = "block";
-  document.getElementById("transaction-form").style.display = "none";
+  sectionToggle("pay-bill-form");
+  sectionBtnStyle("pay-bill-ftr");
 });
-
 document
   .getElementById("transaction-ftr")
   .addEventListener("click", function () {
-    document.getElementById("transaction-form").style.display = "block";
-    document.getElementById("bonus-form").style.display = "none";
-    document.getElementById("add-money-form").style.display = "none";
-    document.getElementById("transfer-form").style.display = "none";
-    document.getElementById("cashout-form").style.display = "none";
-    document.getElementById("pay-bill-form").style.display = "none";
+    sectionToggle("transaction-form");
+    sectionBtnStyle("transaction-ftr");
   });
