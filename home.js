@@ -51,25 +51,24 @@ document
   .getElementById("withdraw-money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const getWithdrawAmount = idValue("withdraw-amount");
-    console.log(getWithdrawAmount);
-    const mainBalance = getIdInnerText("main-balance");
+    const getWithdrawAmount = parseInt(idValue("withdraw-amount"));
+    const mainBalance = parseInt(getIdInnerText("main-balance"));
 
     if (getWithdrawAmount <= 0 || getWithdrawAmount > mainBalance) {
       alert("Provide a valid amount");
       return;
     }
 
-    // const agentNumber = idValue("agent-number");
-    // const pin = parseInt(idValue("withdraw-pin"));
-    // const validPin = 2121;
-    // if (agentNumber.length != 11) {
-    //   alert("Account Number Invalid");
-    //   return;
-    // } else if (pin !== validPin) {
-    //   alert("Your Pin is Invalid");
-    //   return;
-    // }
+    const agentNumber = idValue("agent-number");
+    const pin = parseInt(idValue("withdraw-pin"));
+    const validPin = 2121;
+    if (agentNumber.length != 11) {
+      alert("Account Number Invalid");
+      return;
+    } else if (pin !== validPin) {
+      alert("Your Pin is Invalid");
+      return;
+    }
 
     let newTotalBalance = mainBalance - getWithdrawAmount;
     console.log(newTotalBalance);
@@ -80,25 +79,25 @@ document
 
 document.getElementById("send-now").addEventListener("click", function (event) {
   event.preventDefault();
-  const transferAmount = idValue("transfer-amount");
-  const mainBalance = getIdInnerText("main-balance");
-
+  const transferAmount = parseInt(idValue("transfer-amount"));
+  const mainBalance = parseInt(getIdInnerText("main-balance"));
+  console.log(transferAmount);
   if (transferAmount <= 0 || transferAmount > mainBalance) {
     console.log(mainBalance);
     alert("Provide a valid amount");
     return;
   }
-  // const userNumber = idValue("user-number");
-  // const pin = parseInt(idValue("transfer-pin"));
-  // const validPin = 2121;
+  const userNumber = idValue("user-number");
+  const pin = parseInt(idValue("transfer-pin"));
+  const validPin = 2121;
 
-  // if (userNumber.length != 11) {
-  //   alert("Account Number Invalid");
-  //   return;
-  // } else if (pin !== validPin) {
-  //   alert("Your Pin is Invalid");
-  //   return;
-  // }
+  if (userNumber.length != 11) {
+    alert("Account Number Invalid");
+    return;
+  } else if (pin !== validPin) {
+    alert("Your Pin is Invalid");
+    return;
+  }
 
   let newTotalBalance = mainBalance - transferAmount;
   setInnerText(newTotalBalance);
