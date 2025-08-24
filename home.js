@@ -119,6 +119,7 @@ document.getElementById("cashout-ftr").addEventListener("click", function () {
   document.getElementById("cashout-form").style.display = "block";
   document.getElementById("bonus-form").style.display = "none";
   document.getElementById("pay-bill-form").style.display = "none";
+  document.getElementById("transaction-form").style.display = "none";
 });
 document.getElementById("transfer-ftr").addEventListener("click", function () {
   document.getElementById("add-money-form").style.display = "none";
@@ -126,6 +127,7 @@ document.getElementById("transfer-ftr").addEventListener("click", function () {
   document.getElementById("cashout-form").style.display = "none";
   document.getElementById("bonus-form").style.display = "none";
   document.getElementById("pay-bill-form").style.display = "none";
+  document.getElementById("transaction-form").style.display = "none";
 });
 
 document.getElementById("get-bonus-ftr").addEventListener("click", function () {
@@ -134,6 +136,7 @@ document.getElementById("get-bonus-ftr").addEventListener("click", function () {
   document.getElementById("transfer-form").style.display = "none";
   document.getElementById("cashout-form").style.display = "none";
   document.getElementById("pay-bill-form").style.display = "none";
+  document.getElementById("transaction-form").style.display = "none";
 });
 document.getElementById("pay-bill-ftr").addEventListener("click", function () {
   document.getElementById("bonus-form").style.display = "none";
@@ -141,4 +144,16 @@ document.getElementById("pay-bill-ftr").addEventListener("click", function () {
   document.getElementById("transfer-form").style.display = "none";
   document.getElementById("cashout-form").style.display = "none";
   document.getElementById("pay-bill-form").style.display = "block";
+  document.getElementById("transaction-form").style.display = "none";
 });
+
+document
+  .getElementById("transaction-ftr")
+  .addEventListener("click", function () {
+    document.getElementById("transaction-form").style.display = "block";
+    document.getElementById("bonus-form").style.display = "none";
+    document.getElementById("add-money-form").style.display = "none";
+    document.getElementById("transfer-form").style.display = "none";
+    document.getElementById("cashout-form").style.display = "none";
+    document.getElementById("pay-bill-form").style.display = "none";
+  });
